@@ -1,0 +1,456 @@
+/* ================= GLOBAL STYLE ================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+}
+
+h1{
+  margin-bottom:20px;
+  font-size:40px;
+}
+
+h2{
+  margin-bottom:15px;
+}
+
+p{
+  line-height:1.7;
+}
+
+section{
+  padding:70px 10%;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 10%;
+  background:#020617;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:bold;
+  color:#facc15;
+}
+
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:30px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#facc15;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero{
+  text-align:center;
+  padding:120px 10%;
+  background:linear-gradient(135deg,#1e293b,#020617);
+}
+
+.hero h1{
+  font-size:48px;
+}
+
+.hero p{
+  max-width:600px;
+  margin:auto;
+  margin-bottom:30px;
+}
+
+.hero button{
+  padding:12px 30px;
+  border:none;
+  background:#facc15;
+  color:black;
+  font-weight:bold;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  background:#eab308;
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  padding:60px 10%;
+}
+
+.feature{
+  background:#1e293b;
+  padding:30px;
+  border-radius:12px;
+  transition:0.3s;
+}
+
+.feature:hover{
+  transform:translateY(-10px);
+  background:#334155;
+}
+
+.feature h3{
+  margin-bottom:15px;
+  color:#facc15;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+  padding:80px 10%;
+}
+
+.about h2{
+  margin-top:30px;
+  color:#facc15;
+}
+
+.about ul{
+  margin-top:15px;
+  padding-left:20px;
+}
+
+.about li{
+  margin-bottom:10px;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+  padding:80px 10%;
+}
+
+.service{
+  background:#1e293b;
+  padding:25px;
+  margin-bottom:20px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.service:hover{
+  background:#334155;
+  transform:scale(1.02);
+}
+
+.service h3{
+  color:#facc15;
+  margin-bottom:10px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+  padding:80px 10%;
+}
+
+.contact form{
+  display:flex;
+  flex-direction:column;
+  max-width:500px;
+  margin-top:30px;
+}
+
+.contact input,
+.contact textarea{
+  margin-bottom:15px;
+  padding:12px;
+  border:none;
+  border-radius:6px;
+  outline:none;
+}
+
+.contact textarea{
+  height:120px;
+}
+
+.contact button{
+  padding:12px;
+  border:none;
+  background:#facc15;
+  font-weight:bold;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.contact button:hover{
+  background:#eab308;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+  background:#020617;
+  text-align:center;
+  padding:30px;
+  margin-top:40px;
+}
+
+.footer p{
+  color:#cbd5f5;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+.navbar{
+  flex-direction:column;
+  gap:15px;
+}
+
+.nav-links{
+  gap:15px;
+}
+
+.hero h1{
+  font-size:32px;
+}
+
+section{
+  padding:40px 5%;
+}
+
+}
+
+/* ================= LOGIN PAGE ================= */
+
+.login-container{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.login-form{
+  background:#1e293b;
+  padding:40px;
+  border-radius:10px;
+  width:320px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.login-form h2{
+  text-align:center;
+  color:#facc15;
+}
+
+.login-form input{
+  padding:12px;
+  border:none;
+  border-radius:6px;
+  outline:none;
+}
+
+.login-form button{
+  padding:12px;
+  border:none;
+  background:#facc15;
+  font-weight:bold;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.login-form button:hover{
+  background:#eab308;
+}
+
+
+/* ================= ADMIN DASHBOARD ================= */
+
+.dashboard{
+  display:flex;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+  width:240px;
+  height:100vh;
+  background:#020617;
+  position:fixed;
+  left:0;
+  top:0;
+  padding:30px 20px;
+}
+
+.sidebar ul{
+  list-style:none;
+  margin-top:30px;
+}
+
+.sidebar li{
+  margin-bottom:18px;
+}
+
+.sidebar a{
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+.sidebar a:hover{
+  color:#facc15;
+}
+
+/* MAIN CONTENT */
+
+.main-content{
+  margin-left:240px;
+  width:100%;
+}
+
+/* HEADER */
+
+.header{
+  position:fixed;
+  top:0;
+  left:240px;
+  right:0;
+  height:70px;
+  background:#020617;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 30px;
+  border-bottom:1px solid #1e293b;
+}
+
+/* DASHBOARD CONTENT */
+
+.dashboard-content{
+  padding:40px;
+  margin-top:80px;
+}
+
+/* DASHBOARD CARDS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#1e293b;
+  padding:25px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.card:hover{
+  background:#334155;
+  transform:translateY(-5px);
+}
+
+.card h3{
+  color:#facc15;
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:22px;
+  font-weight:bold;
+}
+
+
+/* ================= ADMIN RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+.sidebar{
+  width:200px;
+}
+
+.main-content{
+  margin-left:200px;
+}
+
+.header{
+  left:200px;
+}
+
+.cards{
+  grid-template-columns:1fr;
+}
+
+}
+
+/* ================= TABLE ================= */
+
+.table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:30px;
+}
+
+.table th,
+.table td{
+  border:1px solid #334155;
+  padding:12px;
+  text-align:left;
+}
+
+.table th{
+  background:#020617;
+  color:#facc15;
+}
+
+.table tr:hover{
+  background:#1e293b;
+}
+
+/* ACTION BUTTONS */
+
+.edit-btn{
+  background:#22c55e;
+  border:none;
+  padding:6px 12px;
+  margin-right:5px;
+  color:white;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.delete-btn{
+  background:#ef4444;
+  border:none;
+  padding:6px 12px;
+  color:white;
+  border-radius:5px;
+  cursor:pointer;
+}
