@@ -15,9 +15,9 @@ const Projects = () => {
       live: '#'
     },
     {
-      title: 'Task Management App',
-      description: 'A beautiful task management application with drag-and-drop functionality',
-      image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80',
+      title: 'Ecommerce App',
+      description: 'A beautiful Ecommerce application with drag-and-drop functionality',
+      image: '/ecom.png',
       tags: ['Vue.js', 'Vuex', 'Tailwind CSS'],
       category: 'fullstack',
       github: '#',
