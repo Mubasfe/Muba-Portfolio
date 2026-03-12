@@ -5,13 +5,7 @@ const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CEO, TechStart',
-      content: 'Working with John was an absolute pleasure. He delivered our project on time and exceeded our expectations. His technical expertise and problem-solving skills are outstanding.',
-      image: 'https://images.unsplash.com/photo-1494790108777-467adad9b9b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
-      rating: 5
-    },
+  
     {
       name: 'Michael Chen',
       role: 'Product Manager, InnovateLabs',
@@ -26,19 +20,13 @@ const Testimonials = () => {
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
       rating: 5
     },
-    {
-      name: 'Sarah Johnson',
-      role: 'CEO, TechStart',
-      content: 'Working with John was an absolute pleasure. He delivered our project on time and exceeded our expectations. His technical expertise and problem-solving skills are outstanding.',
-      image: 'https://images.unsplash.com/photo-1494790108777-467adad9b9b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
-      rating: 5
-    },
+ 
     {
       name: 'Michael Chen',
       role: 'Product Manager, InnovateLabs',
       content: 'John is one of the most talented developers I have worked with. He not only writes clean code but also has great communication skills. Highly recommended!',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
-      rating: 5
+      rating: 4
     },
     {
       name: 'Emily Rodriguez',

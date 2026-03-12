@@ -11,49 +11,30 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <img
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80"
-              alt="Workspace"
-              className="rounded-lg shadow-xl"
-            />
+           <img
+  src='/logo.jpg'
+  alt="Workspace"
+  className="rounded-lg shadow-xl w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 object-cover mx-auto"
+/>
           </div>
 
-          <div className="space-y-6">
+     <div className="space-y-4">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+              Who is Mubarek?
+            </h3>
+            <h4 className="text-xl text-blue-600 dark:text-blue-400 font-bold">
+              Software Developer
+            </h4>
             <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-              I'm a passionate Full Stack Developer with 5+ years of experience in building 
-              web applications. I love creating elegant solutions to complex problems and 
-              I'm constantly learning new technologies.
+              I'm a passionate and self-motivated Software Developer 
+              with a strong foundation in both front-end and back-end technologies.
+              I enjoy translating complex problems into simple, elegant solutions 
+              and collaborating with teams to bring impactful ideas to life. 
+              Whether it's crafting responsive UIs or designing powerful APIs, 
+              I am dedicated to creating high-quality software that makes a difference.
             </p>
-            
-            <div className="grid grid-cols-2 gap-4">
-              <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <h4 className="font-bold text-gray-900 dark:text-white mb-2">Experience</h4>
-                <p className="text-gray-600 dark:text-gray-400">5+ Years</p>
-              </div>
-              <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <h4 className="font-bold text-gray-900 dark:text-white mb-2">Projects</h4>
-                <p className="text-gray-600 dark:text-gray-400">50+ Completed</p>
-              </div>
-              <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <h4 className="font-bold text-gray-900 dark:text-white mb-2">Clients</h4>
-                <p className="text-gray-600 dark:text-gray-400">30+ Worldwide</p>
-              </div>
-              <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <h4 className="font-bold text-gray-900 dark:text-white mb-2">Countries</h4>
-                <p className="text-gray-600 dark:text-gray-400">10+ Served</p>
-              </div>
-            </div>
-
-            <div className="pt-4">
-              <h4 className="font-bold text-gray-900 dark:text-white mb-3">What I Do</h4>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                <li>✓ Full Stack Web Development</li>
-                <li>✓ Responsive Web Design</li>
-                <li>✓ API Development & Integration</li>
-                <li>✓ Performance Optimization</li>
-              </ul>
-            </div>
           </div>
+
         </div>
       </div>
     </section>

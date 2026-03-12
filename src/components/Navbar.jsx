@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+// components/Navbar.jsx
+import React, { useState, useEffect, useMemo } from 'react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
@@ -7,11 +8,23 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const { isDarkMode, toggleTheme } = useTheme();
 
-  const navItems = ['Home', 'About', 'Skills', 'Projects', 'Testimonials', 'Contact'];
+  // Wrap navItems in useMemo to prevent recreation on every render
+  const navItems = useMemo(() => 
+    ['Home', 'About', 'Education', 'Experience', 'Skills', 'Projects', 'Testimonials', 'Contact'], 
+  []);
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = navItems.map(item => item.toLowerCase());
+      
+      // Check if we're at the bottom of the page
+      const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
+      
+      if (isAtBottom) {
+        setActiveSection('contact');
+        return;
+      }
+
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -26,7 +39,7 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [navItems]); // navItems is now memoized and won't change
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId.toLowerCase());
@@ -41,7 +54,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-gray-800 dark:text-white">Portfolio</h1>
+            <h1 className="text-2xl font-bold text-gray-800 dark:text-white">Mubarek</h1>
           </div>
 
           {/* Desktop Menu */}
@@ -52,8 +65,8 @@ const Navbar = () => {
                 onClick={() => scrollToSection(item)}
                 className={`${
                   activeSection === item.toLowerCase()
-                    ? 'text-blue-600 dark:text-blue-400 font-semibold'
-                    : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                    ? 'text-cyan-400 dark:text-cyan-400 font-semibold'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-cyan-400 dark:hover:text-cyan-400'
                 } transition-colors duration-300`}
               >
                 {item}
@@ -94,7 +107,7 @@ const Navbar = () => {
                   onClick={() => scrollToSection(item)}
                   className={`block w-full text-left px-3 py-2 ${
                     activeSection === item.toLowerCase()
-                      ? 'text-blue-600 dark:text-blue-400 font-semibold'
+                      ? 'text-cyan-400 dark:text-cyan-400 font-semibold'
                       : 'text-gray-600 dark:text-gray-300'
                   }`}
                 >

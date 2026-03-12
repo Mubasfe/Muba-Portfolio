@@ -6,11 +6,11 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
+      title: 'Portfolio Website',
       description: 'A full-stack e-commerce platform with React, Node.js, and MongoDB',
-      image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80',
-      tags: ['React', 'Node.js', 'MongoDB', 'Redux'],
-      category: 'fullstack',
+      image: '/portfolio.png',
+      tags: ['React', 'Tailwind CSS', 'Redux'],
+      category: 'frontend',
       github: '#',
       live: '#'
     },
@@ -19,7 +19,7 @@ const Projects = () => {
       description: 'A beautiful task management application with drag-and-drop functionality',
       image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80',
       tags: ['Vue.js', 'Vuex', 'Tailwind CSS'],
-      category: 'frontend',
+      category: 'fullstack',
       github: '#',
       live: '#'
     },
