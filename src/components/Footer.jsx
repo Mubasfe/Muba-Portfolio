@@ -19,12 +19,12 @@ const Footer = () => {
             <div className="space-y-1">
               
               <a 
-                href="https://example.com" 
+                href="https://spiffy-melba-6d790a.netlify.app/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm"
               >
-                github.com/Mubasfe
+                Visit my website
               </a>
             </div>
           </div>
