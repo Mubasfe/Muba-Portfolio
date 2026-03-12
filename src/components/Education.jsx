@@ -44,8 +44,8 @@ const Education = () => {
 
         {/* Timeline Container */}
         <div className="relative">
-          {/* Central Glowing Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full">
+          {/* Desktop Central Glowing Line - Hidden on mobile */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full">
             {/* Base line */}
             <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/20 via-cyan-400 to-cyan-500/20"></div>
             {/* Glowing effect */}
@@ -54,7 +54,7 @@ const Education = () => {
           </div>
 
           {/* Timeline Items */}
-          <div className="space-y-16">
+          <div className="space-y-12 md:space-y-16">
             {educationData.map((item, index) => (
               <div key={index} className="relative">
                 {/* Desktop Layout - Alternating Cards */}
@@ -89,22 +89,9 @@ const Education = () => {
                   </div>
                 </div>
 
-                {/* Mobile Layout */}
+                {/* Mobile Layout - Without timeline line */}
                 <div className="md:hidden">
-                  <div className="relative pl-8">
-                    {/* Mobile Timeline Line */}
-                    <div className="absolute left-3 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 to-blue-400"></div>
-                    
-                    {/* Mobile Timeline Dot */}
-                    <div className="absolute left-0 top-6">
-                      <div className="relative">
-                        <div className="w-4 h-4 bg-cyan-400 rounded-full animate-ping absolute"></div>
-                        <div className="w-4 h-4 bg-cyan-400 rounded-full relative z-10"></div>
-                      </div>
-                    </div>
-                    
-                    <EducationCard item={item} isMobile={true} />
-                  </div>
+                  <EducationCard item={item} isMobile={true} />
                 </div>
               </div>
             ))}
@@ -122,12 +109,18 @@ const EducationCard = ({ item, isMobile = false }) => {
   
   return (
     <div
-      className={`group relative bg-gray-800/40 backdrop-blur-sm rounded-2xl p-8 
+      className={`group relative bg-gray-800/40 backdrop-blur-sm rounded-2xl p-6 md:p-8 
         border border-gray-700 hover:border-cyan-400/50 transition-all duration-500
         hover:shadow-[0_0_40px_rgba(34,211,238,0.2)] 
         ${!isMobile && 'hover:-translate-y-2'}
+        ${isMobile && 'mb-4'}
         overflow-hidden`}
     >
+      {/* Mobile Timeline Indicator - Small dot on left for mobile */}
+      {isMobile && (
+        <div className="absolute left-0 top-8 bottom-8 w-0.5 bg-gradient-to-b from-cyan-400 to-blue-400"></div>
+      )}
+      
       {/* Neon glow background effect on hover */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/0 to-blue-500/0 
         group-hover:from-cyan-400/10 group-hover:via-cyan-400/5 group-hover:to-blue-500/10 
@@ -140,16 +133,16 @@ const EducationCard = ({ item, isMobile = false }) => {
       </div>
 
       {/* Card Content */}
-      <div className="relative z-10">
+      <div className={`relative z-10 ${isMobile ? 'pl-4' : ''}`}>
         {/* Date Badge */}
         <div className="inline-flex items-center px-4 py-1.5 rounded-full 
           bg-gradient-to-r from-cyan-400/10 to-blue-500/10 
-          border border-cyan-400/30 mb-5">
+          border border-cyan-400/30 mb-4">
           <span className="text-cyan-400 text-sm font-medium">{item.date}</span>
         </div>
 
         {/* Degree Title */}
-        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 
+        <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 
           transition-colors duration-300 leading-tight">
           {item.degree}
         </h3>
@@ -157,11 +150,11 @@ const EducationCard = ({ item, isMobile = false }) => {
         {/* University with Icon */}
         <div className="flex items-center gap-2 mb-4 text-gray-300">
           <TypeIcon size={16} className={item.type === 'internship' ? 'text-purple-400' : 'text-cyan-400'} />
-          <span className="font-medium">{item.university}</span>
+          <span className="font-medium text-sm md:text-base">{item.university}</span>
         </div>
 
         {/* Description */}
-        <p className="text-gray-400 text-base leading-relaxed">
+        <p className="text-gray-400 text-sm md:text-base leading-relaxed">
           {item.description}
         </p>
 
