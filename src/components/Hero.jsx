@@ -26,7 +26,25 @@ const Hero = () => {
     <section id="home" className="pt-20 min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="flex-1 text-center md:text-left">
+          {/* Image Section - First on mobile, right on desktop */}
+          <div className="flex-1 flex justify-center order-1 md:order-2">
+            <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1">
+              <div className="w-full h-full rounded-full bg-white dark:bg-gray-800 flex items-center justify-center overflow-hidden">
+                <img 
+                  src='/logo.jpg' 
+                  alt="Mubarek - Full Stack Developer"
+                  className="w-full h-full object-cover rounded-full"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = 'https://via.placeholder.com/400x400?text=Mubarek';
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Text Content - Second on mobile, left on desktop */}
+          <div className="flex-1 text-center md:text-left order-2 md:order-1">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
               Hi, I'm <span className="text-blue-600 dark:text-blue-400">Mubarek</span>
             </h2>
@@ -80,23 +98,6 @@ const Hero = () => {
               >
                 <Mail size={20} />
               </a>
-            </div>
-          </div>
-
-          {/* Updated Image Section */}
-          <div className="flex-1 flex justify-center">
-            <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1">
-              <div className="w-full h-full rounded-full bg-white dark:bg-gray-800 flex items-center justify-center overflow-hidden">
-                <img 
-                  src='/logo.jpg' 
-                  alt="Mubarek - Full Stack Developer"
-                  className="w-full h-full object-cover rounded-full"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = 'https://via.placeholder.com/400x400?text=Mubarek';
-                  }}
-                />
-              </div>
             </div>
           </div>
         </div>
